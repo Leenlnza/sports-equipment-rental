@@ -17,6 +17,7 @@ interface Equipment {
   available: number
   total: number
   description: string
+  imgURL: string
 }
 
 export default function EquipmentPage() {
@@ -167,7 +168,11 @@ export default function EquipmentPage() {
           {filteredEquipment.map((item) => (
             <Card key={item._id} className="overflow-hidden">
               <div className="aspect-square bg-gray-100">
-                <img src="/placeholder.svg" alt={item.name} className="w-full h-full object-cover" />
+                <img
+  src={item.imgURL && item.imgURL.trim() !== "" ? item.imgURL : "/img/default.png"}
+  alt={item.name}
+  className="w-full h-full object-cover"
+/>
               </div>
               <CardHeader>
                 <div className="flex justify-between items-start">

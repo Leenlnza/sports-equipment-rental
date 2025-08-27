@@ -108,23 +108,23 @@ export default function DashboardPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-red-600 flex items-center justify-center">
         <div className="text-white">กำลังโหลดข้อมูล...</div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <header className="bg-gray-800 border-b border-gray-700">
+    <div className="min-h-screen bg-gray-200">
+      <header className="bg-red-600 border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="text-2xl">⚽</div>
             <h1 className="text-2xl font-bold text-white">LCC Sport</h1>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-300">สวัสดี, {user.name}</span>
-            <Button variant="outline" size="sm" onClick={handleLogout}>
+            <span className="text-sm text-white">สวัสดี, {user.name}</span>
+            <Button className=" hover:bg-gray-800 hover:text-white" variant="outline" size="sm" onClick={handleLogout}>
               <LogOut className="h-4 w-4 mr-2" />
               ออกจากระบบ
             </Button>
@@ -134,13 +134,13 @@ export default function DashboardPage() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-white mb-2">แดชบอร์ด</h2>
-          <p className="text-gray-300">จัดการการยืมอุปกรณ์กีฬาของคุณ</p>
+          <h2 className="text-3xl font-bold text-black mb-2">แดชบอร์ด</h2>
+          <p className="text-black">จัดการการยืมอุปกรณ์กีฬาของคุณ</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Link href="/equipment">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer  border-2 border-black">
               <CardHeader className="text-center">
                 <Package className="h-12 w-12 text-yellow-500 mx-auto mb-2" />
                 <CardTitle className="text-lg">ยืมอุปกรณ์</CardTitle>
@@ -152,7 +152,7 @@ export default function DashboardPage() {
           </Link>
 
           <Link href="/history">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer border-2 border-black">
               <CardHeader className="text-center">
                 <Clock className="h-12 w-12 text-green-600 mx-auto mb-2" />
                 <CardTitle className="text-lg">ประวัติการยืม</CardTitle>
@@ -164,7 +164,7 @@ export default function DashboardPage() {
           </Link>
 
           <Link href="/profile">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer  border-2 border-black">
               <CardHeader className="text-center">
                 <div className="h-12 w-12 text-purple-600 mx-auto mb-2 flex items-center justify-center text-2xl">
                   👤
@@ -172,12 +172,12 @@ export default function DashboardPage() {
                 <CardTitle className="text-lg">โปรไฟล์</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-gray-600 text-center">จัดการข้อมูลส่วนตัว</p>
+                <p className="text-sm text-gray-600 text-center">เข้าสู่ระบบใหม่อีกครั้งหนึ่ง กรณีเกิดเป็นปัญหา</p>
               </CardContent>
             </Card>
           </Link>
 
-          <Card className="bg-gradient-to-br from-orange-50 to-red-50">
+          <Card className="bg-gradient-to-br from-orange-50 to-red-50  border-2 border-black">
             <CardHeader className="text-center">
               <div className="text-3xl font-bold text-orange-600 mb-2">{borrowedItems.length}</div>
               <CardTitle className="text-lg">อุปกรณ์ที่ยืม</CardTitle>

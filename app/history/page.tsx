@@ -127,7 +127,7 @@ export default function HistoryPage() {
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Header */}
-      <header className="bg-gray-800 border-b border-gray-900">
+      <header className="bg-gray-800 border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex items-center gap-4">
           <Link href="/dashboard">
             <Button variant="outline" size="sm">
@@ -164,7 +164,7 @@ export default function HistoryPage() {
             ) : (
               <div className="space-y-4">
                 {history.map((item) => (
-                  <div key={item._id} className="border rounded-lg p-4 hover:bg-gray-300 transition-colors">
+                  <div key={item._id} className="border border-gray-300 rounded-lg p-4 hover:bg-gray-300 transition-colors ">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                       <div className="flex-1">
                         <h4 className="font-medium text-lg mb-2">{item.equipmentName}</h4>
