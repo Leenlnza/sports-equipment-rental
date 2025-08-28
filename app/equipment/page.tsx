@@ -112,26 +112,26 @@ export default function EquipmentPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-red-600 flex items-center justify-center">
         <div className="text-white">กำลังโหลด...</div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-400">
       {/* Header */}
-      <header className="bg-gray-800 border-b border-gray-700">
+      <header className="bg-red-600 border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex items-center gap-4">
           <Link href="/dashboard">
-            <Button variant="outline" size="sm">
+            <Button className="hover:bg-gray-800 hover:text-white" variant="outline" size="sm">
               <ArrowLeft className="h-4 w-4 mr-2" />
               กลับ
             </Button>
           </Link>
           <div className="flex items-center gap-2">
             <Package className="h-8 w-8 text-yellow-500" />
-            <h1 className="text-2xl font-bold text-white">อุปกรณ์กีฬา</h1>
+            <h1 className="text-2xl font-bold text-white text-outline-black">อุปกรณ์กีฬา</h1>
           </div>
         </div>
       </header>

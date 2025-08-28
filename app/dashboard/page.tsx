@@ -134,7 +134,15 @@ export default function DashboardPage() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-black mb-2">แดชบอร์ด</h2>
+          <h2 className="text-3xl font-bold text-yellow-500 mb-2 text-outline-black" style={{
+    textShadow: `
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000
+    `,
+  }}
+>     >dashboard</h2>
           <p className="text-black">จัดการการยืมอุปกรณ์กีฬาของคุณ</p>
         </div>
 
@@ -169,7 +177,7 @@ export default function DashboardPage() {
                 <div className="h-12 w-12 text-purple-600 mx-auto mb-2 flex items-center justify-center text-2xl">
                   👤
                 </div>
-                <CardTitle className="text-lg">โปรไฟล์</CardTitle>
+                <CardTitle className="text-lg">เข้าสู่ระบบใหม่</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 text-center">เข้าสู่ระบบใหม่อีกครั้งหนึ่ง กรณีเกิดเป็นปัญหา</p>
@@ -188,7 +196,7 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        <Card>
+        <Card className="border-2 border-black">
           <CardHeader>
             <CardTitle>อุปกรณ์ที่ยืมอยู่</CardTitle>
             <CardDescription>รายการอุปกรณ์ที่คุณยืมอยู่ในขณะนี้</CardDescription>

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[url('/img/123456.jpg')]  bg-center bg-contain">
+    <div className="min-h-screen bg-[url('/img/8003.jpg')]  bg-center ">
 
       {/* Header */}
       <header className="border-b border-gray-700 bg-red-600 backdrop-blur-sm">
@@ -28,15 +28,22 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-black mb-6">ระบบยืมอุปกรณ์กีฬาโรงเรียน</h2>
-          <p className="text-xl text-gray-700 mb-8">ยืมอุปกรณ์กีฬาได้อย่างง่ายดาย ติดตามการยืม-คืน และจัดการอุปกรณ์อย่างมีประสิทธิภาพ</p>
+          <p className="text-xl text-black mb-8" style={{
+    textShadow: `
+      -1px -1px 0 #fff,
+       2px -2px 0 #fff,
+      -1px  1px 0 #fff,
+       1px  1px 0 #fff
+    `,
+  }}>ยืมอุปกรณ์กีฬาได้อย่างง่ายดาย ติดตามการยืม-คืน และจัดการอุปกรณ์อย่างมีประสิทธิภาพ</p>
           <div className="flex gap-4 justify-center">
             <Link href="/register">
-              <Button size="lg" variant="outline" className=" px-8 bg-red-600 text-white">
+              <Button size="lg" variant="outline" className=" px-8 bg-red-600 text-white border-2 border-black">
                 เริ่มใช้งาน
               </Button>
             </Link>
             <Link href="/equipment">
-              <Button size="lg" variant="outline" className="px-8 bg-red-600 text-white">
+              <Button size="lg" variant="outline" className="px-8 bg-red-600 text-white border-2 border-black">
                 ดูอุปกรณ์
               </Button>
             </Link>
@@ -46,10 +53,17 @@ export default function HomePage() {
 
       {/* Equipment Categories */}
       <section className="container mx-auto px-4 py-16">
-        <h3 className="text-3xl font-bold text-center mb-12 text-blue-900 text-outline-white">อุปกรณ์กีฬาทั้งหมด</h3>
+        <h3 className="text-3xl font-bold text-center mb-12 text-yellow-500 text-outline-black"style={{
+    textShadow: `
+      -1px -1px 0 #000,
+       2px -2px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000
+    `,
+  }}>อุปกรณ์กีฬาทั้งหมด</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Link href="/equipment?category=บาสเกตบอล">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-800 border-gray-700 hover:bg-gray-700">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-700 border-gray-700 hover:bg-gray-700">
               <CardHeader className="text-center">
                 <div className="text-6xl mb-4">🏀</div>
                 <CardTitle className="text-yellow-500">บาสเกตบอล</CardTitle>
@@ -61,7 +75,7 @@ export default function HomePage() {
           </Link>
 
           <Link href="/equipment?category=วอลเลย์บอล">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-800 border-gray-700 hover:bg-gray-700">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-700 border-gray-700 hover:bg-gray-700">
               <CardHeader className="text-center">
                 <div className="text-6xl mb-4">🏐</div>
                 <CardTitle className="text-yellow-500">วอลเลย์บอล</CardTitle>
@@ -73,7 +87,7 @@ export default function HomePage() {
           </Link>
 
           <Link href="/equipment?category=ฟุตบอล">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-800 border-gray-700 hover:bg-gray-700">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-700 border-gray-700 hover:bg-gray-700">
               <CardHeader className="text-center">
                 <div className="text-6xl mb-4">⚽</div>
                 <CardTitle className="text-yellow-500">ฟุตบอล</CardTitle>
@@ -85,7 +99,7 @@ export default function HomePage() {
           </Link>
 
           <Link href="/equipment?category=เปตอง">
-            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-800 border-gray-700 hover:bg-gray-700">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-gray-700 border-gray-700 hover:bg-gray-700">
               <CardHeader className="text-center">
                 <div className="text-6xl mb-4">🎯</div>
                 <CardTitle className="text-yellow-500">เปตอง</CardTitle>
